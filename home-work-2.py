@@ -25,10 +25,10 @@ def valid_ator(user_data=[' ', ' ']):
 
       if  not 3 < len(user_data[0]) <= 50:
          raise ExceptionLongName('Error login < 3 or >50')
-      if 8 < len(user_data[1]):
-         raise ExceptionLongPassword('Error password < 8 char or/and non type int ')
+      if 8 > len(user_data[1]):
+         raise ExceptionLongPassword('Error password > 8 char ')
       if num_cheker(user_data[1]) == False:
-         raise ExceptionLongPassword('Error password < 8 char or/and non type int ')
+         raise ExceptionLongPassword('Error password  non type int ')
       if user_data[1] == '12345678':
          raise ExceptionBadPassword('Error your password 12345678 ')       
 
